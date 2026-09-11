@@ -107,7 +107,7 @@ export default function Home() {
 
               <Image
 
-              src="/profile.jpg"
+              src="/Profile.png"
 
               alt="Md. Akash Miya"
 
