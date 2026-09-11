@@ -1,5 +1,6 @@
 const skills = [
   {
+    icon: "💻",
     category: "Programming Languages",
     items: [
       "Python",
@@ -13,7 +14,9 @@ const skills = [
     ],
   },
 
+
   {
+    icon: "🤖",
     category: "AI & Machine Learning",
     items: [
       "PyTorch",
@@ -26,8 +29,10 @@ const skills = [
     ],
   },
 
+
   {
-    category: "Research & Tools",
+    icon: "🛠️",
+    category: "Research & Development Tools",
     items: [
       "Jupyter Notebook",
       "Kaggle",
@@ -35,63 +40,240 @@ const skills = [
       "Proteus",
       "MATLAB",
       "Cisco Packet Tracer",
+      "Git",
+      "Linux",
     ],
   },
 ];
 
 
+
 export default function Skills() {
+
   return (
+
     <section
       id="skills"
-      className="bg-slate-950 px-6 py-20 text-white"
+      className="
+      bg-white
+      px-6
+      py-24
+      text-slate-900
+      "
     >
+
 
       <div className="mx-auto max-w-6xl">
 
-        <h2 className="text-center text-4xl font-bold">
-          Skills & Technologies
-        </h2>
 
 
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        {/* Heading */}
 
-          {skills.map((skill) => (
+
+        <div className="text-center">
+
+
+          <h2
+            className="
+            text-4xl
+            md:text-5xl
+            font-bold
+            bg-gradient-to-r
+            from-slate-900
+            to-cyan-600
+            bg-clip-text
+            text-transparent
+            "
+          >
+
+            Skills & Technologies
+
+          </h2>
+
+
+
+          <p
+            className="
+            mt-5
+            text-lg
+            text-slate-600
+            "
+          >
+
+            Technical expertise in programming,
+            artificial intelligence, machine learning
+            and research tools.
+
+          </p>
+
+
+        </div>
+
+
+
+
+
+
+        {/* Skill Cards */}
+
+
+
+        <div
+          className="
+          mt-14
+          grid
+          gap-8
+          md:grid-cols-3
+          "
+        >
+
+
+
+        {
+          skills.map((skill)=>(
+
 
             <div
+
               key={skill.category}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-cyan-400 transition"
+
+              className="
+              rounded-3xl
+              border
+              border-slate-200
+              bg-white
+              p-8
+              shadow-lg
+              transition
+              hover:-translate-y-2
+              hover:border-cyan-400
+              hover:shadow-xl
+              "
+
             >
 
-              <h3 className="text-xl font-semibold text-cyan-400">
-                {skill.category}
-              </h3>
 
 
-              <div className="mt-5 flex flex-wrap gap-2">
 
-                {skill.items.map((item) => (
+              {/* Icon */}
 
-                  <span
-                    key={item}
-                    className="rounded-full bg-cyan-400/10 px-3 py-1 text-sm text-cyan-300"
-                  >
-                    {item}
-                  </span>
 
-                ))}
+              <div
+                className="
+                flex
+                h-14
+                w-14
+                items-center
+                justify-center
+                rounded-2xl
+                bg-cyan-50
+                text-3xl
+                "
+              >
+
+                {skill.icon}
 
               </div>
 
 
+
+
+
+
+              {/* Category */}
+
+
+              <h3
+                className="
+                mt-6
+                text-xl
+                font-bold
+                text-slate-900
+                "
+              >
+
+                {skill.category}
+
+              </h3>
+
+
+
+
+
+
+
+              {/* Skills */}
+
+
+              <div
+                className="
+                mt-6
+                flex
+                flex-wrap
+                gap-3
+                "
+              >
+
+
+
+              {
+                skill.items.map((item)=>(
+
+
+                  <span
+
+                    key={item}
+
+                    className="
+                    rounded-full
+                    border
+                    border-slate-200
+                    bg-slate-50
+                    px-4
+                    py-2
+                    text-sm
+                    font-medium
+                    text-slate-700
+                    transition
+                    hover:border-cyan-400
+                    hover:bg-cyan-50
+                    hover:text-cyan-700
+                    "
+
+                  >
+
+                    {item}
+
+                  </span>
+
+
+                ))
+              }
+
+
+
+              </div>
+
+
+
             </div>
 
-          ))}
+
+          ))
+        }
+
+
 
         </div>
 
+
+
       </div>
 
+
     </section>
+
+
   );
+
 }
