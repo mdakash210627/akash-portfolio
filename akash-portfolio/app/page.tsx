@@ -20,6 +20,7 @@ export default function Home() {
 
 
       {/* HERO SECTION */}
+      
 
       <section
         className="
@@ -29,8 +30,10 @@ export default function Home() {
         items-center
         justify-center
         px-6
+        pt-32
+        md:pt-40
+        pb-16
         overflow-hidden
-        bg-white
         "
       >
 
@@ -85,6 +88,7 @@ export default function Home() {
           <div
             className="
             mx-auto
+            mt-8
             mb-8
             relative
             h-44
