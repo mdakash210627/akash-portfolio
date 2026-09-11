@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Navbar from "@/components/Navbar";
 import About from "../components/About";
 import Research from "../components/Research";
@@ -6,63 +8,387 @@ import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
 import GithubProjects from "../components/GithubProjects";
+
+
 export default function Home() {
+
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+
+    <main className="min-h-screen bg-slate-950 text-white overflow-hidden">
+
       <Navbar />
 
-      <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
 
-        <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
-          Md. Akash Miya
-        </h1>
+      {/* HERO SECTION */}
 
-        <h2 className="mt-6 text-2xl text-cyan-400 md:text-4xl">
-          AI Researcher | Machine Learning Engineer
-        </h2>
-
-        <p className="mt-6 max-w-3xl text-lg text-gray-300">
-          Researching Artificial Intelligence, Deep Learning,
-          Computer Vision, Biomedical Imaging and Explainable AI.
-        </p>
-
-
-        <div className="mt-8 flex gap-4">
-
-          <button className="rounded-full bg-cyan-500 px-6 py-3 font-semibold text-black hover:bg-cyan-400">
-            View Research
-          </button>
+      <section
+      className="
+      relative
+      min-h-screen
+      flex
+      items-center
+      justify-center
+      px-6
+      overflow-hidden
+      "
+      >
 
 
-          <a
-           href="/Md_Akash_Miya_CV.pdf"
-           download
-           className="rounded-full border border-gray-500 px-6 py-3 hover:bg-white hover:text-black"
-          >
-           Download CV
-          </a>
+        {/* Animated Background */}
 
+        <div className="
+        absolute
+        top-20
+        left-20
+        h-72
+        w-72
+        rounded-full
+        bg-cyan-500/20
+        blur-3xl
+        animate-pulse
+        ">
         </div>
 
 
-        <div className="mt-12 flex gap-6 text-gray-400">
+        <div className="
+        absolute
+        bottom-20
+        right-20
+        h-96
+        w-96
+        rounded-full
+        bg-blue-600/20
+        blur-3xl
+        animate-pulse
+        ">
+        </div>
 
-          <span>Deep Learning</span>
-          <span>Computer Vision</span>
-          <span>Explainable AI</span>
+
+
+        <div
+        className="
+        relative
+        z-10
+        max-w-5xl
+        text-center
+        "
+        >
+
+
+
+          {/* Profile Image */}
+
+          <div
+          className="
+          mx-auto
+          mb-8
+          relative
+          h-44
+          w-44
+          rounded-full
+          p-1
+          bg-gradient-to-r
+          from-cyan-400
+          via-blue-500
+          to-purple-600
+          animate-spin-slow
+          "
+          >
+
+            <div
+            className="
+            h-full
+            w-full
+            rounded-full
+            overflow-hidden
+            bg-slate-900
+            "
+            >
+
+              <Image
+
+              src="/profile.jpg"
+
+              alt="Md. Akash Miya"
+
+              fill
+
+              className="object-cover"
+
+              priority
+
+              />
+
+            </div>
+
+
+          </div>
+
+
+
+
+
+          {/* Name */}
+
+          <h1
+          className="
+          text-5xl
+          font-bold
+          tracking-tight
+          md:text-7xl
+          bg-gradient-to-r
+          from-white
+          to-gray-400
+          bg-clip-text
+          text-transparent
+          "
+          >
+
+            Md. Akash Miya
+
+          </h1>
+
+
+
+
+          <h2
+          className="
+          mt-5
+          text-xl
+          md:text-3xl
+          font-semibold
+          text-cyan-400
+          "
+          >
+
+          AI Researcher | Machine Learning Engineer
+
+          </h2>
+
+
+
+
+          <p
+          className="
+          mx-auto
+          mt-6
+          max-w-3xl
+          text-lg
+          leading-relaxed
+          text-gray-300
+          "
+          >
+
+          Researching Artificial Intelligence,
+          Deep Learning, Computer Vision,
+          Biomedical Imaging and Explainable AI
+          for reliable healthcare solutions.
+
+          </p>
+
+
+
+
+
+          {/* Buttons */}
+
+
+          <div
+          className="
+          mt-10
+          flex
+          flex-wrap
+          justify-center
+          gap-5
+          "
+          >
+
+
+            <a
+
+            href="#research"
+
+            className="
+            rounded-full
+            bg-cyan-500
+            px-8
+            py-3
+            font-semibold
+            text-black
+            transition
+            hover:scale-105
+            hover:bg-cyan-400
+            "
+
+            >
+
+            🔬 View Research
+
+            </a>
+
+
+
+
+            <a
+
+            href="/Md_Akash_Miya_CV.pdf"
+
+            download
+
+            className="
+            rounded-full
+            border
+            border-gray-600
+            px-8
+            py-3
+            transition
+            hover:bg-white
+            hover:text-black
+            hover:scale-105
+            "
+
+            >
+
+            📄 Download CV
+
+            </a>
+
+
+          </div>
+
+
+
+
+
+          {/* Social Links */}
+
+
+          <div
+          className="
+          mt-10
+          flex
+          justify-center
+          gap-8
+          text-gray-400
+          "
+          >
+
+
+          <a
+          href="YOUR_GOOGLE_SCHOLAR_LINK"
+          target="_blank"
+          className="hover:text-cyan-400 transition"
+          >
+          Google Scholar
+          </a>
+
+
+
+          <a
+          href="YOUR_GITHUB_LINK"
+          target="_blank"
+          className="hover:text-cyan-400 transition"
+          >
+          GitHub
+          </a>
+
+
+
+          <a
+          href="YOUR_LINKEDIN_LINK"
+          target="_blank"
+          className="hover:text-cyan-400 transition"
+          >
+          LinkedIn
+          </a>
+
+
+          </div>
+
+
+
+
+
+          {/* Research Tags */}
+
+
+          <div
+          className="
+          mt-12
+          flex
+          flex-wrap
+          justify-center
+          gap-4
+          "
+          >
+
+          {
+          [
+          "Deep Learning",
+          "Computer Vision",
+          "Medical AI",
+          "Explainable AI"
+          ].map((item)=>(
+
+
+          <span
+          key={item}
+          className="
+          rounded-full
+          border
+          border-slate-700
+          bg-slate-900/60
+          px-5
+          py-2
+          text-sm
+          text-gray-300
+          backdrop-blur
+          hover:border-cyan-400
+          transition
+          "
+          >
+
+          {item}
+
+          </span>
+
+
+          ))
+          }
+
+
+          </div>
+
+
 
         </div>
 
 
       </section>
+
+
+
+
+
+      {/* Other Sections */}
+
+
       <About />
+
       <Research />
+
       <Publications />
+
       <Skills />
+
       <Experience />
+
       <GithubProjects />
+
       <Contact />
 
+
     </main>
+
   );
 }
