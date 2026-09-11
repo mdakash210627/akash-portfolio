@@ -88,14 +88,14 @@ export default function Home() {
           <div
             className="
             mx-auto
-            mt-8
+            mt-6
             mb-8
             relative
             h-44
             w-44
             rounded-full
-            p-1
-            bg-gradient-to-r
+            overflow-hidden
+            border-4
             from-cyan-400
             via-blue-500
             to-purple-500
@@ -121,7 +121,7 @@ export default function Home() {
 
                 fill
 
-                className="object-cover"
+                className="object-cover object-top"
 
                 priority
 
