@@ -170,7 +170,7 @@ export default function Home() {
             "
           >
 
-            AI Researcher | Machine Learning Engineer
+            Researcher | Software Engineer
 
           </h2>
 
